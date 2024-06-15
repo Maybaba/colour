@@ -1,9 +1,9 @@
-package com.corourProject.entity.dto;
+package com.colourProject.entity.dto;
 
 import lombok.*;
 
-import java.security.Timestamp;
 import java.time.LocalDateTime;
+
 
 @NoArgsConstructor
 @AllArgsConstructor
@@ -11,13 +11,11 @@ import java.time.LocalDateTime;
 @EqualsAndHashCode
 @Getter
 @Builder
-public class Colors {
-    private int colourId;
+public class User {
     private int userId;
-    private String colourCode;
-    private int count;
+    private String username;
+    private String password;
+    private String email;
     private LocalDateTime createdAt;
     private LocalDateTime updatedAt;
-
-
 }
