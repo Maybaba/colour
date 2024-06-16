@@ -1,4 +1,4 @@
-package com.colourProject.entity.dto;
+package com.colourProject.entity;
 
 import lombok.*;
 
@@ -9,7 +9,7 @@ import java.time.LocalDateTime;
 @AllArgsConstructor
 @ToString
 @EqualsAndHashCode
-@Getter
+@Getter @Setter
 @Builder
 public class User {
     private int userId;

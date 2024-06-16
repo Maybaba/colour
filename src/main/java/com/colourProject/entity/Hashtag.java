@@ -1,4 +1,4 @@
-package com.colourProject.entity.dto;
+package com.colourProject.entity;
 
 import lombok.*;
 
