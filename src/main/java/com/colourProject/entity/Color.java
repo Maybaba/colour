@@ -1,21 +1,22 @@
-package com.entity;
+package com.colourProject.entity;
 
 import lombok.*;
 
 import java.time.LocalDateTime;
 
-
 @NoArgsConstructor
 @AllArgsConstructor
 @ToString
 @EqualsAndHashCode
-@Getter @Setter
+@Getter
 @Builder
-public class User {
+public class Color {
+    private int colourId;
     private int userId;
-    private String username;
-    private String password;
-    private String email;
+    private String colourCode;
+    private int count;
     private LocalDateTime createdAt;
     private LocalDateTime updatedAt;
+
+
 }

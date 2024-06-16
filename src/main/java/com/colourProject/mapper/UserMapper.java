@@ -1,6 +1,6 @@
 package com.colourProject.mapper;
 
-import com.entity.User;
+import com.colourProject.entity.User;
 import org.apache.ibatis.annotations.*;
 import java.util.List;
 

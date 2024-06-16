@@ -10,7 +10,7 @@
     </select>
 
 <!--    <insert id="insert" useGeneratedKeys="true" keyProperty="com.colourProject.model.User">-->
-    <insert id="insert" parameterType="com.colourProject.model.User">
+    <insert id="insert">
         INSERT INTO Users (username, password, email)
         VALUES (#{username}, #{password}, #{email})
     </insert>

@@ -11,7 +11,7 @@
 
     <!--  SELECT 조회 결과를 담을 Entity 클래스 별칭 설정하기  -->
     <typeAliases>
-         <typeAlias type="com.entity.User" alias="user" />
+         <typeAlias type="com.colourProject.entity.User" alias="user" />
 
     </typeAliases>
 

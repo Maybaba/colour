@@ -1,4 +1,4 @@
-package com.entity;
+package com.colourProject.entity;
 
 import lombok.*;
 
@@ -8,7 +8,7 @@ import lombok.*;
 @EqualsAndHashCode
 @Getter
 @Builder
-public class MemoHashtag {
-    private int memoId;
+public class Hashtag {
     private int hashtagId;
+    private String name;
 }

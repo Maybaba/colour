@@ -1,6 +1,6 @@
 package com.colourProject.service;
 
-import com.entity.User;
+import com.colourProject.entity.User;
 import com.colourProject.dto.request.UserRequest;
 import com.colourProject.mapper.UserMapper;
 import lombok.RequiredArgsConstructor;
