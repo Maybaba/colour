@@ -6,10 +6,8 @@ plugins {
 
 group = 'com.server'
 version = '0.0.1-SNAPSHOT'
+sourceCompatibility = '11'
 
-java {
-    sourceCompatibility = '11'
-}
 
 configurations {
     compileOnly {
@@ -22,25 +20,29 @@ repositories {
 }
 
 dependencies {
-    implementation 'org.springframework.boot:spring-boot-starter'
+    implementation 'org.springframework.boot:spring-boot-starter-web'
+    implementation 'org.springframework.boot:spring-boot-starter-actuator'
     compileOnly 'org.projectlombok:lombok'
-    developmentOnly 'org.springframework.boot:spring-boot-devtools'
     annotationProcessor 'org.projectlombok:lombok'
     testImplementation 'org.springframework.boot:spring-boot-starter-test'
-    testRuntimeOnly 'org.junit.platform:junit-platform-launcher'
 
+    //jsp 라이브러리
     implementation 'javax.servlet:jstl'
     implementation 'org.apache.tomcat.embed:tomcat-embed-jasper'
 
+    //마리아디비 커넥터
     implementation 'org.mariadb.jdbc:mariadb-java-client:3.3.3'
 
+    //SpringJDBC 모듈
     implementation 'org.springframework.boot:spring-boot-starter-jdbc'
 
+    // 마이바티스 모듈
     implementation 'org.mybatis.spring.boot:mybatis-spring-boot-starter:2.2.2'
 
+    // 입력값 검증 라이브러리
     implementation 'org.springframework.boot:spring-boot-starter-validation'
 
-    implementation 'org.springframework.boot:spring-boot-starter-security'
+    // 암호화 라이브러리
 }
 
 

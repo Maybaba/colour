@@ -1,4 +1,4 @@
-package com.colourProject.entity.dto;
+package com.entity;
 
 import lombok.*;
 
@@ -10,13 +10,13 @@ import java.time.LocalDateTime;
 @EqualsAndHashCode
 @Getter
 @Builder
-public class Color {
-    private int colourId;
+public class Memo {
+    private int memoId;
     private int userId;
+    private String content;
     private String colourCode;
-    private int count;
+    private String mediaUrl;
     private LocalDateTime createdAt;
     private LocalDateTime updatedAt;
-
 
 }

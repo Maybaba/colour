@@ -1,22 +1,21 @@
-package com.colourProject.entity.dto;
+package com.entity;
 
 import lombok.*;
 
 import java.time.LocalDateTime;
 
+
 @NoArgsConstructor
 @AllArgsConstructor
 @ToString
 @EqualsAndHashCode
-@Getter
+@Getter @Setter
 @Builder
-public class Memo {
-    private int memoId;
+public class User {
     private int userId;
-    private String content;
-    private String colourCode;
-    private String mediaUrl;
+    private String username;
+    private String password;
+    private String email;
     private LocalDateTime createdAt;
     private LocalDateTime updatedAt;
-
 }

@@ -1,27 +1,31 @@
 package com.colourProject.controller;
 
+import com.entity.User;
+import com.colourProject.service.UserService;
+import lombok.RequiredArgsConstructor;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.*;
+
+
+import java.util.List;
 
 
 @Controller
-@RequestMapping("/users")
+@RequiredArgsConstructor
+//@RequestMapping("/")
+@Slf4j
 public class UserController {
+    //의존성 주입
     private final UserService userService;
 
-    public UserController(UserService userService) {
-        this.userService = userService;
-    }
-
-    @GetMapping
+    @GetMapping("/")
     public String listUsers(Model model) {
         List<User> users = userService.getAllUsers();
         model.addAttribute("users", users);
-        return "users";
+        log.info("access in to server");
+        return "users/user";
     }
 
     @PostMapping
@@ -31,6 +35,6 @@ public class UserController {
         user.setPassword(password);
         user.setEmail(email);
         userService.registerUser(user);
-        return "redirect:/users";
+        return "redirect:users/user";
     }
 }
